@@ -1,0 +1,116 @@
+{% extends 'website/layout.html' %}
+
+{% block body %}
+    <header>
+        <h1>Optimized Meal Plan</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Breakfast</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Calories</th>
+                        <th>Carbohydrate</th>
+                        <th>Fats</th>
+                        <th>Protein</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in breakfast %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.calories }}</td>
+                        <td>{{ item.carbohydrate }}</td>
+                        <td>{{ item.total_fat }}</td>
+                        <td>{{ item.protein }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Lunch</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Calories</th>
+                        <th>Carbohydrate</th>
+                        <th>Fats</th>
+                        <th>Protein</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in lunch %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.calories }}</td>
+                        <td>{{ item.carbohydrate }}</td>
+                        <td>{{ item.total_fat }}</td>
+                        <td>{{ item.protein }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Snacks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Calories</th>
+                        <th>Carbohydrate</th>
+                        <th>Fats</th>
+                        <th>Protein</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in snacks %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.calories }}</td>
+                        <td>{{ item.carbohydrate }}</td>
+                        <td>{{ item.total_fat }}</td>
+                        <td>{{ item.protein }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Dinner</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Calories</th>
+                        <th>Carbohydrate</th>
+                        <th>Fats</th>
+                        <th>Protein</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in dinner %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.calories }}</td>
+                        <td>{{ item.carbohydrate }}</td>
+                        <td>{{ item.total_fat }}</td>
+                        <td>{{ item.protein }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <br><br>
+    <a href="{% url 'website:home' %}">Home</a><br><br>
+        
+{% endblock %}
